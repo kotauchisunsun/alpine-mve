@@ -1,1 +1,2 @@
-sudo docker run --rm -it -v `pwd`/image:/image -v `pwd`/scene:/scene alpine-mve-docker ./run.sh
+sudo docker build -t kotauchisunsun/alpine-mve .
+sudo docker run --rm -it --privileged -v `pwd`/mve:/mve -v `pwd`/image:/image -v `pwd`/scene:/scene kotauchisunsun/alpine-mve ./run.sh 
